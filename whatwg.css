@@ -1,0 +1,87 @@
+@media screen and (min-width: 1200px) {
+  html body {
+    width: 600px;
+  }
+
+  html body pre {
+    font-size: 16px;
+  }
+  html body h4 + .element,
+  html body h4 + div.status + .element {
+    margin-top: unset;
+  }
+
+  /* format code in inline text, not in IDL or HTML blocks */
+  html body code:not(.idl):not(.html):not(.abnf) {
+    padding: 2px 6px;
+    margin: 0;
+    font-size: 85%;
+    color: var(--text);
+    background-color: rgba(220,220,220,.5);
+    border-radius: 3px;
+    font-weight: normal;
+  }
+
+  html body code :link {
+    color: var(--text);
+    text-decoration: underline;
+  }
+
+  html body code :visited {
+    color: var(--color-link--visited);
+  }
+
+  html body code :hover {
+    text-decoration: underline;
+  }
+
+  html body .note::before,
+  html body .domintro::before,
+  html body .example::before {
+    position: static;
+    transform: none;
+    background: none;
+    text-transform: uppercase;
+    display: block;
+    color: inherit;
+  }
+
+  html body .element {
+    border-left: 10px solid var(--mint-green);
+  }
+
+  html body .domintro,
+  html body .note {
+    border-left: 10px solid var(--color-green);
+  }
+
+  html body .abnf,
+  html body .example {
+    border-left: 10px solid var(--color-example);
+  }
+
+  /* The browser support blocks */
+  html body .status {
+    position: relative;
+    min-width: 300px;
+    width: auto;
+    margin: 50px;
+    padding: var(--panel-padding);
+    background: white;
+    border-radius: 0;
+    box-shadow: var(--shadow);
+    font: inherit;
+  }
+
+  html body .status p {
+    font-size: 16px;
+  }
+
+  html body .status input[value="⋰"] {
+    display: none;
+  }
+
+  html body .brief {
+    line-height: 1.6; /* https://html.spec.whatwg.org/multipage/canvas.html#the-canvas-state */
+  }
+}

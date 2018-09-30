@@ -1,0 +1,15 @@
+@media (min-width: 1550px) {
+  html body .overlarge.overlarge.overlarge.overlarge {    /* e.g. https://www.w3.org/TR/cssom-1/#serializing-media-feature-values */
+    margin: 50px -150px !important;
+  }
+}
+
+@media  (min-width: 2200px) {
+  html {
+    padding-right: 500px;
+  }
+
+  nav {
+    width: 500px !important;
+  }
+}
