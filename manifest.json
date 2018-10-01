@@ -12,14 +12,23 @@
       "matches": ["https://*.whatwg.org/*"],
       "css": [
         "base.css",
+        "w3-whatwg.css",
         "whatwg.css"
       ]
     },
     {
-      "matches": ["https://*.w3.org/*"],
+      "matches": ["https://*.w3.org/TR*"],
       "css": [
         "base.css",
+        "w3-whatwg.css",
         "w3.css"
+      ]
+    },
+    {
+      "matches": ["http://www.ecma-international.org/ecma-262/*"],
+      "css": [
+        "base.css",
+        "ecma.css"
       ]
     }
   ],

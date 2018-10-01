@@ -1,6 +1,42 @@
 @media (min-width: 1550px) {
-  html body .overlarge.overlarge.overlarge.overlarge {    /* e.g. https://www.w3.org/TR/cssom-1/#serializing-media-feature-values */
-    margin: 50px -150px !important;
+  * {
+    line-height: 1.6 !important; /* Override https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/ */
+  }
+
+  html body .sidefigure { /* https://www.w3.org/TR/css-grid-1/ */
+    float: none;
+  }
+
+  html body.toc-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  html body.toc-sidebar main {
+    width: var(--page-width);
+  }
+
+  /* format code in inline text, not in IDL or HTML blocks */
+  /* TODO maybe combine with whatwg.css */
+  html body code { /* https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/ */
+    padding: 2px 6px;
+    margin: 0;
+    font-size: 85%;
+    color: var(--color-brown-800);
+    background-color: var(--color-gray-code);
+    border-radius: 3px;
+    font-weight: normal;
+  }
+
+  html body table code,
+  html body h1 code,
+  html body h2 code,
+  html body h3 code,
+  html body h4 code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
   }
 }
 

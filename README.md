@@ -19,7 +19,7 @@ Also, a few pretty things:
 - Decent line height in the navigation menus for easier click targets
 
 ## Where does it change styles?
-- w3.org
+- w3.org/TR
 - ecma-international.org/ecma-262
 - drafts.csswg.org
 - test.csswg.org
@@ -35,6 +35,14 @@ _probably_ break things occasionally. whatwg.org and ecma-international.org shou
 If you want to change something significantly, raise an issue first. You can paste
 screenshots straight into GitHub. If you do a PR, please paste before and after images and
 a link to the page where the change takes effect. 
+
+### Tech
+Also, it uses standardJS
+
+### Testing
+All testing is manual. It's a bit tricky, because class names are shared between sites (e.g. .note).
+Some pages I've looked at in more details than others:
+- https://www.w3.org/TR/css-grid-1/
 
 ## Where do you see yourself in five years?
 I'd be quite pleased if some of the people in charge of these sites took the lead from

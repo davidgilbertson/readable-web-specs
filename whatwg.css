@@ -1,6 +1,6 @@
 @media screen and (min-width: 1200px) {
   html body {
-    width: 600px;
+    width: var(--page-width);
   }
 
   html body pre {
@@ -16,14 +16,18 @@
     padding: 2px 6px;
     margin: 0;
     font-size: 85%;
-    color: var(--text);
-    background-color: rgba(220,220,220,.5);
+    color: var(--color-brown-800);
+    background-color: var(--color-gray-code);
     border-radius: 3px;
     font-weight: normal;
   }
 
+  html body code.idl {
+    background: var(--color-gray-100);
+  }
+
   html body code :link {
-    color: var(--text);
+    color: var(--color-brown-800);
     text-decoration: underline;
   }
 
@@ -35,6 +39,7 @@
     text-decoration: underline;
   }
 
+  html body .warning::before,
   html body .note::before,
   html body .domintro::before,
   html body .example::before {
@@ -44,20 +49,6 @@
     text-transform: uppercase;
     display: block;
     color: inherit;
-  }
-
-  html body .element {
-    border-left: 10px solid var(--mint-green);
-  }
-
-  html body .domintro,
-  html body .note {
-    border-left: 10px solid var(--color-green);
-  }
-
-  html body .abnf,
-  html body .example {
-    border-left: 10px solid var(--color-example);
   }
 
   /* The browser support blocks */

@@ -1,0 +1,162 @@
+@media screen and (min-width: 1550px) {
+  html body > *:not(code):not(nav):not(#toc) { /* https://www.w3.org/TR/CSS22/ */
+    min-width: 100%;
+  }
+
+  html body p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  html body hr {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  /* These classes are strewn across various domains */
+  html body figure,
+  html body table:not(.matrix),
+  html body p.note,
+  html body li.note,
+  html body table.propdef, /* https://www.w3.org/TR/css-grid-1/#grid-containers */
+  html body div.note,
+  html body .issue,
+  html body .def,
+  html body .advisement,
+  html body .element,
+  html body .abnf,
+  html body .domintro,
+  html body .warning,
+  html body .example,
+  html body .idl-code, /* https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html */
+  html body .sidefigure,
+  html body .overlarge.overlarge,
+  html body .html-example {
+    box-sizing: border-box;
+    min-width: 1000px;
+    padding: var(--panel-padding);
+    margin: var(--panel-margin) !important;
+    background: white;
+    border-radius: 0;
+    box-shadow: var(--shadow);
+    color: inherit;
+    font-size: 18px;
+    list-style-type: none;
+  }
+
+  html body dl dd {
+    margin-left: var(--indent);
+  }
+
+  html body dl.switch,
+  html body ul,
+  html body ol {
+    padding-left: var(--indent);
+  }
+
+  /* Extra left indenting for items that start further right,
+  because they're nested inside indented lists
+   */
+  html body dl dd .example,
+  html body dl dd .issue,
+  html body dl dd .note,
+  html body ul .example,
+  html body ul .issue,
+  html body ul .note,
+  html body ol .example,
+  html body ol .issue,
+  html body ol .note {
+    margin-left: calc(var(--panel-offset-horizontal) - var(--indent));
+  }
+
+  html body dl.switch .example,
+  html body dl.switch .issue,
+  html body dl.switch .note,
+  html body ol ol .example,
+  html body ol ol .issue,
+  html body ol ol .note {
+    margin-left: calc(var(--panel-offset-horizontal) - var(--indent) * 2);
+  }
+
+  html body ol dl.switch .example,
+  html body ol dl.switch .issue,
+  html body ol dl.switch .note {
+    margin-left: calc(var(--panel-offset-horizontal) - var(--indent) * 3);
+  }
+
+  /* some items are nested, so we reset the styles this really is a mess,
+  just add them as I find them */
+  html body .issue .issue,
+  html body .note table,
+  html body .overlarge table,
+  html body .propdef table,
+  html body .widget table,
+  html body .def .def,
+  html body .domintro .diagrams, /* https://html.spec.whatwg.org/multipage/canvas.html#building-paths */
+  html body .example .issue,
+  html body .example table,
+  html body .example figure,
+  html body .example .note,
+  html body .example .warning,
+  html body .example .html-example,
+  html body .note .html-example,
+  html body .example .example {
+    box-shadow: none;
+    min-width: 0;
+    margin: 50px 0 !important;
+  }
+
+  /* panel left stripe colours */
+  html body .element {
+    border-left: 10px solid var(--mint-green);
+  }
+
+  html body .warning {
+    border-left: 10px solid var(--color-warning);
+  }
+
+  html body .domintro,
+  html body .note {
+    border-left: 10px solid var(--color-green);
+  }
+
+  html body .abnf,
+  html body .html-example,
+  html body .example {
+    border-left: 10px solid var(--color-example);
+  }
+
+  /* Undo nested borders */
+  html body .note .html-example,
+  html body .example .html-example,
+  html body .example .example {
+    border-left: none;
+  }
+
+
+  html body .toc,
+  html body .toc ol,
+  html body .toc ul,
+  html body .toc li,
+  html body dt {
+    line-height: 1.6;
+    font-size: 18px;
+  }
+
+  html body h1,
+  html body h2,
+  html body h3,
+  html body h4,
+  html body h5,
+  html body h6 {
+    background: transparent; /* https://www.w3.org/TR/2015/REC-pointerevents-20150224/ */
+    color: inherit;
+  }
+
+  html body > h1 { font-size: 26px; }
+  html body > h2 { font-size: 24px; }
+  html body > h3 { font-size: 22px; }
+  html body > h4 { font-size: 20px; }
+  html body > h5 { font-size: 20px; }
+  html body > h6 { font-size: 20px; }
+
+}

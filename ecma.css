@@ -1,0 +1,50 @@
+:root {
+  --note-indent: 100px;
+}
+
+@media (min-width: 1550px) {
+  html body {
+    width: var(--page-width);
+    margin: 0 auto;
+    padding-left: 25%;
+  }
+
+  html body emu-note {
+    color: var(--color-brown-800);
+    margin-left: var(--note-indent);
+  }
+
+  html body emu-note emu-table {
+    position: relative;
+    left: calc(var(--note-indent) * -1);
+  }
+
+  html body pre {
+    background-color: var(--color-gray-code);
+    padding: 10px;
+    border-radius: 4px;
+    overflow: auto;
+  }
+
+  html body table {
+    background-color: white;
+  }
+
+  html body pre code {
+    background: transparent !important;
+  }
+
+  html body code {
+    padding: 2px 6px;
+    margin: 0;
+    font-size: 85%;
+    color: var(--color-brown-800);
+    background-color: rgba(220,220,220,.5);
+    border-radius: 3px;
+    font-weight: normal;
+  }
+
+  html body var {
+    color: #00796b; /* a darker variant of the existing green */
+  }
+}
