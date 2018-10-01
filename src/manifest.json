@@ -1,6 +1,6 @@
 {
   "name": "Readable web specs",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Improve the readability of web documentation",
   "permissions": [
     "activeTab",
