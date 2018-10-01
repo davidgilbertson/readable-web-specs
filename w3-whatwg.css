@@ -1,11 +1,38 @@
-@media screen and (min-width: 1550px) {
-  html body > *:not(code):not(nav):not(#toc) { /* https://www.w3.org/TR/CSS22/ */
-    min-width: 100%;
-  }
+html body p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-  html body p {
-    margin-top: 10px;
-    margin-bottom: 10px;
+html body .toc,
+html body .toc ol,
+html body .toc ul,
+html body .toc li,
+html body dt {
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  background: transparent; /* https://www.w3.org/TR/2015/REC-pointerevents-20150224/ */
+  color: inherit;
+}
+
+html body > h1 { font-size: 26px; }
+html body > h2 { font-size: 24px; }
+html body > h3 { font-size: 22px; }
+html body > h4 { font-size: 20px; }
+html body > h5 { font-size: 20px; }
+html body > h6 { font-size: 20px; }
+
+@media screen and (min-width: 1550px) {
+  /* All immediate children of body shouldn't be less that 600px; */
+  html body > *:not(code):not(nav):not(#toc) { /* https://www.w3.org/TR/CSS22/ */
+    /*min-width: 100%;*/
   }
 
   html body hr {
@@ -21,6 +48,7 @@
   html body div.note,
   html body .issue,
   html body .def,
+  html body .dtd-fragment, /* https://www.w3.org/TR/html401/struct/links.html#h-12.3 */
   html body .advisement,
   html body .element,
   html body .abnf,
@@ -53,9 +81,10 @@
     padding-left: var(--indent);
   }
 
-  /* Extra left indenting for items that start further right,
-  because they're nested inside indented lists
-   */
+  /*
+    Extra left indenting for items that start further right,
+    because they're nested inside indented lists
+  */
   html body dl dd .example,
   html body dl dd .issue,
   html body dl dd .note,
@@ -86,6 +115,7 @@
   /* some items are nested, so we reset the styles this really is a mess,
   just add them as I find them */
   html body .issue .issue,
+  html body .dtd-fragment .dtd-fragment,
   html body .note table,
   html body .overlarge table,
   html body .propdef table,
@@ -96,6 +126,7 @@
   html body .example table,
   html body .example figure,
   html body .example .note,
+  html body .idl .idl-code,
   html body .example .warning,
   html body .example .html-example,
   html body .note .html-example,
@@ -131,32 +162,4 @@
   html body .example .example {
     border-left: none;
   }
-
-
-  html body .toc,
-  html body .toc ol,
-  html body .toc ul,
-  html body .toc li,
-  html body dt {
-    line-height: 1.6;
-    font-size: 18px;
-  }
-
-  html body h1,
-  html body h2,
-  html body h3,
-  html body h4,
-  html body h5,
-  html body h6 {
-    background: transparent; /* https://www.w3.org/TR/2015/REC-pointerevents-20150224/ */
-    color: inherit;
-  }
-
-  html body > h1 { font-size: 26px; }
-  html body > h2 { font-size: 24px; }
-  html body > h3 { font-size: 22px; }
-  html body > h4 { font-size: 20px; }
-  html body > h5 { font-size: 20px; }
-  html body > h6 { font-size: 20px; }
-
 }

@@ -2,7 +2,7 @@
   --note-indent: 100px;
 }
 
-@media (min-width: 1550px) {
+@media screen and (min-width: 1550px) {
   html body {
     width: var(--page-width);
     margin: 0 auto;
@@ -32,16 +32,6 @@
 
   html body pre code {
     background: transparent !important;
-  }
-
-  html body code {
-    padding: 2px 6px;
-    margin: 0;
-    font-size: 85%;
-    color: var(--color-brown-800);
-    background-color: rgba(220,220,220,.5);
-    border-radius: 3px;
-    font-weight: normal;
   }
 
   html body var {

@@ -11,17 +11,6 @@
     margin-top: unset;
   }
 
-  /* format code in inline text, not in IDL or HTML blocks */
-  html body code:not(.idl):not(.html):not(.abnf) {
-    padding: 2px 6px;
-    margin: 0;
-    font-size: 85%;
-    color: var(--color-brown-800);
-    background-color: var(--color-gray-code);
-    border-radius: 3px;
-    font-weight: normal;
-  }
-
   html body code.idl {
     background: var(--color-gray-100);
   }

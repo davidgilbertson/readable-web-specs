@@ -1,8 +1,4 @@
-@media (min-width: 1550px) {
-  * {
-    line-height: 1.6 !important; /* Override https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/ */
-  }
-
+@media screen and (min-width: 1550px) {
   html body .sidefigure { /* https://www.w3.org/TR/css-grid-1/ */
     float: none;
   }
@@ -17,18 +13,6 @@
     width: var(--page-width);
   }
 
-  /* format code in inline text, not in IDL or HTML blocks */
-  /* TODO maybe combine with whatwg.css */
-  html body code { /* https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/ */
-    padding: 2px 6px;
-    margin: 0;
-    font-size: 85%;
-    color: var(--color-brown-800);
-    background-color: var(--color-gray-code);
-    border-radius: 3px;
-    font-weight: normal;
-  }
-
   html body table code,
   html body h1 code,
   html body h2 code,
@@ -40,8 +24,8 @@
   }
 }
 
-@media  (min-width: 2200px) {
-  html {
+@media (min-width: 2200px) {
+  html body.toc-sidebar {
     padding-right: 500px;
   }
 

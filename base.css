@@ -20,25 +20,42 @@
   --page-width: 600px;
 }
 
-@media screen and (min-width: 1550px) {
-  html, /* for ECMA */
-  html[lang] { /* for specificity */
-    background: var(--color-orange-100);
-  }
+html, /* for ECMA */
+html[lang] { /* for specificity */
+  background: var(--color-orange-100);
+}
 
+html body {
+  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 19px;
+  color: var(--color-brown-800);
+}
+
+* {
+  line-height: 1.6 !important; /* Override https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/ */
+}
+
+html body li {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: 2 !important;
+}
+
+/* format code in inline text, not in blocks */
+html body code:not(.idl):not(.html):not(.abnf) {
+  padding: 2px 6px;
+  margin: 0;
+  font-size: 85%;
+  color: var(--color-brown-800);
+  background-color: var(--color-gray-code);
+  border-radius: 3px;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 1550px) {
   html body {
     width: var(--page-width);
     margin: 0 auto !important;    /* override other styles on https://www.w3.org/TR/CSS */
-    background: transparent;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 19px;
-    color: var(--color-brown-800);
-    line-height: 1.6;
-  }
-
-  html body li {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    line-height: 2 !important;
   }
 }
