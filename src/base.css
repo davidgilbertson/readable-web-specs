@@ -1,4 +1,3 @@
-/* TODO (davidg): css prop for MQ */
 :root {
   --color-orange-100: #fff3e0;
   --color-gray-100: #eceff1;
@@ -13,11 +12,28 @@
   --color-link--visited: #609;
   --indent: 40px;
 
+  --body-text-width: 600px;
+  --panel-width: 800px;
+  --panel-offset-horizontal: -100px;
+  --panel-margin: 50px -100px;
   --panel-padding: 20px 30px;
-  --panel-offset-horizontal: -200px;
-  --panel-margin: 50px var(--panel-offset-horizontal);
-  --panel-width: 1000px;
-  --page-width: 600px;
+}
+
+@media screen and (min-width: 1400px) {
+  body:not(.toc-sidebar) {
+    --panel-width: 1000px;
+    /* TODO less repetition */
+    --panel-offset-horizontal: -200px;
+    --panel-margin: 50px -200px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body.toc-sidebar {
+    --panel-width: 1000px;
+    --panel-offset-horizontal: -200px;
+    --panel-margin: 50px -200px;
+  }
 }
 
 html, /* for ECMA */
@@ -53,9 +69,10 @@ html body code:not(.idl):not(.html):not(.abnf) {
   font-weight: normal;
 }
 
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1400px) {
   html body {
-    width: var(--page-width);
+    width: var(--body-text-width);
     margin: 0 auto !important;    /* override other styles on https://www.w3.org/TR/CSS */
+    padding: 0;
   }
 }

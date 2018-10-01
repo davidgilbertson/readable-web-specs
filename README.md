@@ -9,43 +9,52 @@ A bit too small for my eyes.
 
 ## What does it change?
 It sets what I consider the right default for readable text:
-- A generous 20px font size
-- Dark gray text, not black
+- A generous font size
+- Dark text, not black
+- Light background, not white (the contrast ratio is 10, not 20)
 - Nice fonts, with a native font stack
 - A comfortable column width, about 14 words per row for body text
 
 Also, a few pretty things:
-- Breakouts (for examples, notes, etc) are 1000px wide and stand out
+- Breakouts (for examples, notes, etc) are wider and stand out
 - Decent line height in the navigation menus for easier click targets
+- GitHub style <code> highlighting
 
 ## Where does it change styles?
 - w3.org/TR
-- ecma-international.org/ecma-262
-- drafts.csswg.org
-- test.csswg.org
+- w3c.github.io
+- csswg.org
 - html.spec.whatwg.org
 - drafts.fxtf.org
-- w3c.github.io
+- ecma-international.org/ecma-262
 
-## About this repo
-PRs and issues welcome. The CSS for W3C sites seems quite ad hoc in places. Most
-classes are shared across all w3.org pages, some are not. So this CSS will
-_probably_ break things occasionally. whatwg.org and ecma-international.org should be fine 
+## What does it do on other pages?
+Nuthin'
+
+## About this project
+This is for me. The CSS is a shitfight. It probably breaks the layout of every spec I've never been to.
+But if you like it and want to help, your PRs and issues are quite welcome.
 
 If you want to change something significantly, raise an issue first. You can paste
 screenshots straight into GitHub. If you do a PR, please paste before and after images and
 a link to the page where the change takes effect. 
 
 ### Tech
-Also, it uses standardJS
+It uses [StandardJS](https://standardjs.com/)
 
 ### Testing
-All testing is manual. It's a bit tricky, because class names are shared between sites (e.g. .note).
+All testing is manual. It's a bit tricky, because class names are shared between sites.
+
 Some pages I've looked at in more details than others:
 - https://www.w3.org/TR/css-grid-1/
+- https://html.spec.whatwg.org/
+- http://www.ecma-international.org/ecma-262
+- https://drafts.csswg.org/css-variables
+- https://www.w3.org/TR/css-2015/
+- https://www.w3.org/TR/css-2017/ (note the different nav behavior to 2015)
 
 ## Where do you see yourself in five years?
-I'd be quite pleased if some of the people in charge of these sites took the lead from
+I'd be quite pleased if the people in charge of these sites took the lead from
 this repo and incorporated some readability improvements.
 
 ## Thanks

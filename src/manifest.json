@@ -9,7 +9,11 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.w3.org/TR*", "https://w3c.github.io/*"],
+      "matches": [
+        "https://*.w3.org/TR*",
+        "https://w3c.github.io/*",
+        "https://*.csswg.org/*"
+      ],
       "css": [
         "base.css",
         "w3-whatwg.css",
@@ -17,7 +21,9 @@
       ]
     },
     {
-      "matches": ["https://*.whatwg.org/*"],
+      "matches": [
+        "https://*.whatwg.org/*"
+      ],
       "css": [
         "base.css",
         "w3-whatwg.css",
@@ -25,7 +31,9 @@
       ]
     },
     {
-      "matches": ["http://www.ecma-international.org/ecma-262/*"],
+      "matches": [
+        "http://www.ecma-international.org/ecma-262/*"
+      ],
       "css": [
         "base.css",
         "ecma.css"

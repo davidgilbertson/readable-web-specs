@@ -2,9 +2,9 @@
   --note-indent: 100px;
 }
 
-@media screen and (min-width: 1550px) {
+@media screen and (min-width: 1400px) {
   html body {
-    width: var(--page-width);
+    width: var(--body-text-width);
     margin: 0 auto;
     padding-left: 25%;
   }

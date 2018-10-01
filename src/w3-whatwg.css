@@ -29,16 +29,11 @@ html body > h4 { font-size: 20px; }
 html body > h5 { font-size: 20px; }
 html body > h6 { font-size: 20px; }
 
-@media screen and (min-width: 1550px) {
-  /* All immediate children of body shouldn't be less that 600px; */
-  html body > *:not(code):not(nav):not(#toc) { /* https://www.w3.org/TR/CSS22/ */
-    /*min-width: 100%;*/
-  }
+html body hr {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
 
-  html body hr {
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
+@media screen and (min-width: 1400px) {
   /* These classes are strewn across various domains */
   html body figure,
   html body table:not(.matrix),
@@ -60,7 +55,7 @@ html body > h6 { font-size: 20px; }
   html body .overlarge.overlarge,
   html body .html-example {
     box-sizing: border-box;
-    min-width: 1000px;
+    min-width: var(--panel-width);
     padding: var(--panel-padding);
     margin: var(--panel-margin) !important;
     background: white;

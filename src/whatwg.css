@@ -1,6 +1,6 @@
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
   html body {
-    width: var(--page-width);
+    width: var(--body-text-width);
   }
 
   html body pre {

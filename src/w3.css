@@ -1,27 +1,25 @@
-@media screen and (min-width: 1550px) {
-  html body .sidefigure { /* https://www.w3.org/TR/css-grid-1/ */
-    float: none;
-  }
+html body .sidefigure { /* https://www.w3.org/TR/css-grid-1/ */
+  float: none;
+}
 
-  html body.toc-sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+html body.toc-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  html body.toc-sidebar main {
-    width: var(--page-width);
-  }
+html body.toc-sidebar main {
+  width: var(--body-text-width);
+}
 
-  html body table code,
-  html body h1 code,
-  html body h2 code,
-  html body h3 code,
-  html body h4 code {
-    background: none;
-    padding: 0;
-    font-size: inherit;
-  }
+html body table code,
+html body h1 code,
+html body h2 code,
+html body h3 code,
+html body h4 code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
 }
 
 @media (min-width: 2200px) {
