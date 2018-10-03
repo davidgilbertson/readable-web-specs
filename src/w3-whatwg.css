@@ -41,6 +41,7 @@ html body hr {
   html body li.note,
   html body table.propdef, /* https://www.w3.org/TR/css-grid-1/#grid-containers */
   html body div.note,
+  html body div.idl-code, /* https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html */
   html body .issue,
   html body .def,
   html body .dtd-fragment, /* https://www.w3.org/TR/html401/struct/links.html#h-12.3 */
@@ -50,7 +51,6 @@ html body hr {
   html body .domintro,
   html body .warning,
   html body .example,
-  html body .idl-code, /* https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html */
   html body .sidefigure,
   html body .overlarge.overlarge,
   html body .html-example {
@@ -64,47 +64,6 @@ html body hr {
     color: inherit;
     font-size: 18px;
     list-style-type: none;
-  }
-
-  html body dl dd {
-    margin-left: var(--indent);
-  }
-
-  html body dl.switch,
-  html body ul,
-  html body ol {
-    padding-left: var(--indent);
-  }
-
-  /*
-    Extra left indenting for items that start further right,
-    because they're nested inside indented lists
-  */
-  html body dl dd .example,
-  html body dl dd .issue,
-  html body dl dd .note,
-  html body ul .example,
-  html body ul .issue,
-  html body ul .note,
-  html body ol .example,
-  html body ol .issue,
-  html body ol .note {
-    margin-left: calc(var(--panel-offset-horizontal) - var(--indent));
-  }
-
-  html body dl.switch .example,
-  html body dl.switch .issue,
-  html body dl.switch .note,
-  html body ol ol .example,
-  html body ol ol .issue,
-  html body ol ol .note {
-    margin-left: calc(var(--panel-offset-horizontal) - var(--indent) * 2);
-  }
-
-  html body ol dl.switch .example,
-  html body ol dl.switch .issue,
-  html body ol dl.switch .note {
-    margin-left: calc(var(--panel-offset-horizontal) - var(--indent) * 3);
   }
 
   /* some items are nested, so we reset the styles this really is a mess,
@@ -129,6 +88,47 @@ html body hr {
     box-shadow: none;
     min-width: 0;
     margin: 50px 0 !important;
+  }
+
+  html body dl dd {
+    margin-left: var(--indent);
+  }
+
+  html body dl.switch,
+  html body ul,
+  html body ol {
+    padding-left: var(--indent);
+  }
+
+  /*
+    Extra left indenting for items that start further right,
+    because they're nested inside indented lists
+  */
+  html body dl dd .example,
+  html body dl dd .issue,
+  html body dl dd .note:not(span),
+  html body ul .example,
+  html body ul .issue,
+  html body ul .note:not(span),
+  html body ol .example,
+  html body ol .issue,
+  html body ol .note:not(span) {
+    margin-left: calc(var(--panel-offset-horizontal) - var(--indent));
+  }
+
+  html body dl.switch .example,
+  html body dl.switch .issue,
+  html body dl.switch .note:not(span),
+  html body ol ol .example,
+  html body ol ol .issue,
+  html body ol ol .note:not(span) {
+    margin-left: calc(var(--panel-offset-horizontal) - var(--indent) * 2);
+  }
+
+  html body ol dl.switch .example,
+  html body ol dl.switch .issue,
+  html body ol dl.switch .note:not(span) {
+    margin-left: calc(var(--panel-offset-horizontal) - var(--indent) * 3);
   }
 
   /* panel left stripe colours */
