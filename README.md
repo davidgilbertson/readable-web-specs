@@ -52,6 +52,8 @@ Some pages I've looked at in more details than others:
 - https://drafts.csswg.org/css-variables
 - https://www.w3.org/TR/css-2015/
 - https://www.w3.org/TR/css-2017/ (note the different nav behavior to 2015)
+- https://majido.github.io/scroll-restoration-proposal/history-based-api.html#web-idl
+- https://drafts.fxtf.org/fill-stroke/
 
 ## Where do you see yourself in five years?
 I'd be quite pleased if the people in charge of these sites took the lead from

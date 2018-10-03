@@ -22,6 +22,12 @@ html body h4 code {
   font-size: inherit;
 }
 
+/* Undo weird boxes on */
+/* https://w3c.github.io/ServiceWorker/#service-worker-events */
+[data-algorithm]:not(.heading) {
+  border: none;
+}
+
 @media (min-width: 2200px) {
   html body.toc-sidebar {
     padding-right: 500px;

@@ -12,7 +12,9 @@
       "matches": [
         "https://*.w3.org/TR*",
         "https://w3c.github.io/*",
-        "https://*.csswg.org/*"
+        "https://*.csswg.org/*",
+        "https://drafts.fxtf.org/*",
+        "https://majido.github.io/*"
       ],
       "css": [
         "base.css",

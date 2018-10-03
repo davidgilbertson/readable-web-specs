@@ -69,6 +69,7 @@ html body hr {
   /* some items are nested, so we reset the styles this really is a mess,
   just add them as I find them */
   html body .issue .issue,
+  html body .issue figure,
   html body .dtd-fragment .dtd-fragment,
   html body .note table,
   html body .overlarge table,
@@ -113,7 +114,7 @@ html body hr {
   html body ol .example,
   html body ol .issue,
   html body ol .note:not(span) {
-    margin-left: calc(var(--panel-offset-horizontal) - var(--indent));
+    transform: translateX(calc(var(--indent) * -1));
   }
 
   html body dl.switch .example,
@@ -122,13 +123,13 @@ html body hr {
   html body ol ol .example,
   html body ol ol .issue,
   html body ol ol .note:not(span) {
-    margin-left: calc(var(--panel-offset-horizontal) - var(--indent) * 2);
+    transform: translateX(calc(var(--indent) * -2));
   }
 
   html body ol dl.switch .example,
   html body ol dl.switch .issue,
   html body ol dl.switch .note:not(span) {
-    margin-left: calc(var(--panel-offset-horizontal) - var(--indent) * 3);
+    transform: translateX(calc(var(--indent) * -3));
   }
 
   /* panel left stripe colours */
