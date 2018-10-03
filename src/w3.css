@@ -24,7 +24,7 @@ html body h4 code {
 
 /* Undo weird boxes on */
 /* https://w3c.github.io/ServiceWorker/#service-worker-events */
-[data-algorithm]:not(.heading) {
+html body [data-algorithm]:not(.heading) {
   border: none;
 }
 
