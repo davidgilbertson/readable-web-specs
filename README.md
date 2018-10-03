@@ -18,7 +18,7 @@ It sets what I consider the right default for readable text:
 Also, a few pretty things:
 - Breakouts (for examples, notes, etc) are wider and stand out
 - Decent line height in the navigation menus for easier click targets
-- GitHub style <code> highlighting
+- GitHub style `<code>` highlighting
 
 ## Where does it change styles?
 - w3.org/TR
