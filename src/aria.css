@@ -1,0 +1,11 @@
+/* https://www.w3.org/TR/wai-aria-practices/examples/landmarks/contentinfo.html */
+html body nav ul {
+  max-width: 170px;
+  width: auto !important;
+  color: red;
+}
+
+/* random shit for specificity */
+html[lang="en"] body {
+  width: auto;
+}

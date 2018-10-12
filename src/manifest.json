@@ -24,6 +24,14 @@
     },
     {
       "matches": [
+        "https://*.w3.org/TR/wai-aria-practices/*"
+      ],
+      "css": [
+        "aria.css"
+      ]
+    },
+    {
+      "matches": [
         "https://*.whatwg.org/*"
       ],
       "css": [
